@@ -21,7 +21,7 @@ const NavBar = () => {
           <a href='/' className="btn btn-ghost normal-case text-xl">COTW</a>
         </div>
         <div className="navbar-end">
-          <ul className="menu menu-horizontal px-1 space-y-1 space-x-20 hidden lg:flex">
+          <ul className="menu menu-horizontal px-1 space-x-20 hidden lg:flex">
               {menuItems}
           </ul>
         </div>
