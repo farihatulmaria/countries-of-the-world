@@ -4,7 +4,7 @@ import Footer from './Footer';
 import NavBar from './NavBar';
 const Main = () => {
     return (
-        <div className='px-10 h-max'>
+        <div className='h-max'>
             <NavBar />
             <Outlet />
             <Footer/>

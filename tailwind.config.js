@@ -11,11 +11,15 @@ module.exports = {
     themes: [
       {
         mytheme: {
-          primary: "#a991f7",
-          secondary: "#f6d860",
-          accent: "#37cdbe",
-          neutral: "#3d4451",
-          "base-100": "#ffffff",
+          primary: "#047AFF",
+          secondary: "#463AA2",
+          accent: "#C148AC",
+          neutral: "#021431",
+          "base-100": "#FFFFFF",
+          info: "#93E7FB",
+          success: "#81CFD1",
+          warning: "#EFD7BB",
+          error: "#E58B8B",
         },
       },
       "dracula",
