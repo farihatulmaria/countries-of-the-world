@@ -17,6 +17,9 @@ export const countriesSlice = createSlice({
     name:"countries",
     initialState,
     reducers:{
+        addCountries:(state,{payload})=>{
+            state.countries = payload
+        },
         findOneCountry:(state,{payload})=>{
            state.countries = state.countries.find(country=>country.name === payload)
         }
@@ -29,11 +32,11 @@ export const countriesSlice = createSlice({
                 state.error = "";
                 state.countries = [];
             })
-            .addCase(getCountries.fulfilled,(state,{payload})=>{
+            .addCase(getCountries.fulfilled,(state,action)=>{
                 state.isLoading = false;
                 state.isError = false;
                 state.error = "";
-                state.countries = payload;
+                state.countries = action.payload;
             })
             .addCase(getCountries.rejected,(state,action)=>{
                 state.isLoading = false;
