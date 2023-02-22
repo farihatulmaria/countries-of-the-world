@@ -1,13 +1,16 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 const Countries = () => {
-  
+    const state = useSelector(state=>state.countries);
+    const dispatch = useDispatch();
+    let content;
+    let countries = []
     return (
         <div className='countries-container py-10'>
-            {/* <h1 className='text-center text-4xl font-bold'>All Countries Of The World ({countries?.length})</h1> */}
-            {/* <div className='mt-10 flex justify-end gap-5 px-10'>
+             <h1 className='text-center text-4xl font-bold'>All Countries Of The World ({countries?.length})</h1> 
+             <div className='mt-10 flex justify-end gap-5 px-10'>
                 <button
-                    className={`text-primary border border-primary px-5 py-2 rounded-full font-semibold  `}
-                    onClick={()=>dispatch(toogleBySort())}>
+                    className={`text-primary border border-primary px-5 py-2 rounded-full font-semibold  `}>
                     Sort
                 </button>
                 <button
@@ -23,7 +26,7 @@ const Countries = () => {
                 {
                     content
                 }
-            </div> */}
+            </div> 
         </div>
     );
 };
