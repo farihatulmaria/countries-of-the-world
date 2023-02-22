@@ -1,4 +1,5 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { fetchAllCountries } from "./countriesApi";
 
 
 const initialState ={
@@ -8,10 +9,18 @@ const initialState ={
     error:""
 }
 
-
+export const getAllCountires = createAsyncThunk('countries/getAllCountires', async ()=>{
+    const allCountries = await fetchAllCountries();
+    return allCountries
+})
 
 const countriesSlice = createSlice({
     name:"countries",
     initialState,
-    extraReducers:
+    extraReducers:(builders)=>{
+    }
 })
+
+
+
+export default countriesSlice.reducer
