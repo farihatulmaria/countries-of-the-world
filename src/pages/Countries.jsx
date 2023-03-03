@@ -1,5 +1,8 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 const Countries = () => {
+    const state = useSelector(state=>state)
+    console.log(state);
     let content;
     let countries = []
     return (
