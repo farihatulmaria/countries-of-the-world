@@ -1,8 +1,5 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 const Countries = () => {
-    const state = useSelector(state=>state.countries);
-    const dispatch = useDispatch();
     let content;
     let countries = []
     return (
